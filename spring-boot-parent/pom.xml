@@ -189,7 +189,59 @@
 				<artifactId>zt-zip</artifactId>
 				<version>1.7</version>
 			</dependency>
-		</dependencies>
+            <!-- Additional tests dependencies -->
+            <dependency>
+                <groupId>org.jboss.arquillian</groupId>
+                <artifactId>arquillian-bom</artifactId>
+                <version>1.1.5.Final</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.arquillian.extension</groupId>
+                <artifactId>arquillian-transaction-bom</artifactId>
+                <version>1.0.1.Final</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.arquillian.extension</groupId>
+                <artifactId>arquillian-persistence-dbunit</artifactId>
+                <version>1.0.0.Alpha7</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.arquillian.extension</groupId>
+                <artifactId>arquillian-service-integration-spring-inject</artifactId>
+                <version>1.0.0.Beta3</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.arquillian.extension</groupId>
+                <artifactId>arquillian-service-integration-spring-javaconfig</artifactId>
+                <version>1.0.0.Beta3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.arquillian.extension</groupId>
+                <artifactId>arquillian-transaction-spring</artifactId>
+                <version>1.0.0.Beta3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.arquillian.extension</groupId>
+                <artifactId>arquillian-persistence-spring</artifactId>
+                <version>1.0.0.Beta3</version>
+            </dependency>
+        </dependencies>
 	</dependencyManagement>
 	<dependencies>
 		<!-- Generally Useful Test Dependencies -->

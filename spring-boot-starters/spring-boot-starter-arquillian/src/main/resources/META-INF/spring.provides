@@ -1,0 +1,1 @@
+provides: arquillian-junit-container,arquillian-service-integration-spring-inject,arquillian-service-integration-spring-javaconfig,arquillian-transaction-springarquillian-transaction-api,arquillian-persistence-spring,arquillian-persistence-dbunit,junit
